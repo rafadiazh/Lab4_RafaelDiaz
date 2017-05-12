@@ -21,6 +21,19 @@ public class eSeguridad extends Empleado{
         super(sueldo, nombre, id, edad, altura, peso, residencia);
         this.dia = dia;
     }
+
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
+    @Override
+    public String toString() {
+        return "eSeguridad{" + "dia=" + dia + '}';
+    }
     
     
     

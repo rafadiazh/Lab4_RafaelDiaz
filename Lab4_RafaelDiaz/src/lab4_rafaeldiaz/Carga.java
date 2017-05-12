@@ -25,6 +25,35 @@ public class Carga extends Empleado{
         this.hora_salida = hora_salida;
         this.fecha = fecha;
     }
+
+    public String getHora_entrada() {
+        return hora_entrada;
+    }
+
+    public void setHora_entrada(String hora_entrada) {
+        this.hora_entrada = hora_entrada;
+    }
+
+    public String getHora_salida() {
+        return hora_salida;
+    }
+
+    public void setHora_salida(String hora_salida) {
+        this.hora_salida = hora_salida;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
+    @Override
+    public String toString() {
+        return "Carga{" + "hora_entrada=" + hora_entrada + ", hora_salida=" + hora_salida + ", fecha=" + fecha + '}';
+    }
     
     
     
