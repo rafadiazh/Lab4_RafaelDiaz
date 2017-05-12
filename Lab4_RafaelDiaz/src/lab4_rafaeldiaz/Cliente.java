@@ -23,6 +23,7 @@ public class Cliente extends Persona {
         this.fecha_compra = fecha_compra;
     }
     
+    
 
     public Cliente() {
         super();
