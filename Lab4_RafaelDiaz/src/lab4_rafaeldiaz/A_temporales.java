@@ -9,6 +9,19 @@ package lab4_rafaeldiaz;
  *
  * @author Rafael
  */
-public class A_temporales {
+public class A_temporales extends Almacen{
+
+    public A_temporales() {
+        super();
+    }
+
+    public A_temporales(double tamanometros, double altura) {
+        super(tamanometros, altura);
+    }
+
+    @Override
+    public String toString() {
+        return "A_temporales{" + '}'+super.toString();
+    }
     
 }
