@@ -9,6 +9,12 @@ package lab4_rafaeldiaz;
  *
  * @author Josue Rodriguez
  */
-public class Excepcion {
+public class Excepcion extends Exception{
+
+    public Excepcion(String string) {
+        super(string);
+    }
+    
+    
     
 }

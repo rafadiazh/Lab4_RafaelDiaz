@@ -20,12 +20,15 @@ public class Persona {
     }
 
     public Persona(String nombre, String id, int edad, double altura, double peso, String residencia) {
+        if(edad<18){
+            
+        }else{
         this.nombre = nombre;
         this.id = id;
         this.edad = edad;
         this.altura = altura;
         this.peso = peso;
-        this.residencia = residencia;
+        this.residencia = residencia;}
     }
 
     public String getNombre() {
