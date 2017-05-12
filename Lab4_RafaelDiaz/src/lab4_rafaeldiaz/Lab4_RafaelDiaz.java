@@ -23,6 +23,14 @@ public class Lab4_RafaelDiaz {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //RAFA ESTO SOLO ES PRUEBA SE PUEDE BORRAR
+        Antirrobo a = new Transposicion();
+        System.out.println("CONTRA: ");
+        String x = sc.next();
+        System.out.println(a.codificacion(x, "HOLA"));
+        String y = a.codificacion(x, "HOLA");
+        System.out.println(a.decodificacion(y, "HOLA"));
+        //HASTA AQUI
         A_dePlanta ap = new A_dePlanta();
         A_regionales ar = new A_regionales();
         A_plataforma aplat = new A_plataforma();
