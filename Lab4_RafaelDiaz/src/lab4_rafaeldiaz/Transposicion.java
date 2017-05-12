@@ -102,6 +102,7 @@ public class Transposicion extends Antirrobo {
             } else {
                 usar = abc2;
             }
+            //CUANDO USEMOS ESTE METODO HAY QUE USAR LA CLAVE QUE ESTA GUARDADA
             for (int j = 0; j < abc.length(); j++) {
                 if (code.charAt(i) == usar.charAt(j)) {
                     int ayuda = (int) code.charAt(i);

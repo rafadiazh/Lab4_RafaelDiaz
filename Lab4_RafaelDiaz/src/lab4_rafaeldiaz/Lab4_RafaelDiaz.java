@@ -43,7 +43,7 @@ public class Lab4_RafaelDiaz {
         String x = sc.next();
         System.out.println(a.codificacion(x, "HOLA"));
         String y = a.codificacion(x, "HOLA");
-        System.out.println(a.decodificacion(y, "HOLA"));
+        System.out.println(a.decodificacion(x, "HoLa"));
         //HASTA AQUI
         A_dePlanta ap = new A_dePlanta();
         A_regionales ar = new A_regionales();
