@@ -33,6 +33,14 @@ public class Lab4_RafaelDiaz {
     static Date fecha;
     static String contrasena;
 static double sueldo;
+
+    static Date fecha2;
+    static double vidautil;
+    static double precio;
+    static double tamano;
+    static String descripcion;
+    static String nombre2;
+    static int numeroproductos;
     /**
      * @param args the command line arguments
      */
@@ -51,6 +59,7 @@ static double sueldo;
         A_temporales at = new A_temporales();
         ArrayList<Almacen> almacenes = new ArrayList();
         ArrayList<Persona> personas = new ArrayList();
+        ArrayList<Producto> productos = new ArrayList();
         int opcion;
         do {
             System.out.println("*****MENU*****");
@@ -323,10 +332,12 @@ static double sueldo;
                                         ((Carga)personas.get(permod)).setResidencia(residencia);
                                         sc = new Scanner(System.in);
                                         break;
+                                    default:
+                                        System.out.println("Esa no es una opcion");
                                 }
                                     
                                 } else {
-    //eSeguridad(Date fecha, String contrasena, double sueldo, String nombre, String id, int edad, double altura, double peso, String residencia)
+    
                                 System.out.println("Que desea modificar? 0,1,2...");
                                 int modper = sc.nextInt();
                                 switch (modper) {
@@ -434,6 +445,9 @@ static double sueldo;
                                         ((Cliente)personas.get(permod)).setResidencia(residencia);
                                         sc = new Scanner(System.in);
                                         break;
+                                    default:
+                                        System.out.println("No es una opcion");
+                                        break;
                                 }
 
                             }
@@ -452,10 +466,28 @@ static double sueldo;
                     int op3 = sc.nextInt();
                     switch (op3) {
                         case 1:
-
+//Producto(Date fecha2, double vidautil, double precio, double tamano, String descripcion, String nombre2, int numeroproductos)
+                            System.out.println("Ingrese la vida util");
+                            vidautil = sc.nextDouble();
+                            System.out.println("Ingrese el precio");
+                            precio = sc.nextDouble();
+                            System.out.println("Ingrese el tamaño");
+                            tamano = sc.nextDouble();
+                            sc = new Scanner(System.in);
+                            System.out.println("Ingrese la descripcion");
+                            descripcion = sc.nextLine();
+                            sc = new Scanner(System.in);
+                            System.out.println("Ingrese el nombre");
+                            nombre2 = sc.nextLine();
+                            sc = new Scanner(System.in);
+                            System.out.println("Numero de productos");
+                            numeroproductos = sc.nextInt();
+                            productos.add(new Producto(fecha2,vidautil, precio,tamano,descripcion, nombre2,numeroproductos));
                             break;
                         case 2:
-
+                            for (int i = 0; i < productos.size(); i++) {
+                                System.out.println(i+" "+productos.get(i));
+                            }
                             break;
                         case 3:
 
