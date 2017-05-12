@@ -21,6 +21,14 @@ public class A_regionales extends Almacen{
         this.nombredepartamento = nombredepartamento;
     }
 
+    public String getNombredepartamento() {
+        return nombredepartamento;
+    }
+
+    public void setNombredepartamento(String nombredepartamento) {
+        this.nombredepartamento = nombredepartamento;
+    }
+    
     @Override
     public String toString() {
         return "A_regionales{" + "nombredepartamento=" + nombredepartamento + '}'+super.toString();
