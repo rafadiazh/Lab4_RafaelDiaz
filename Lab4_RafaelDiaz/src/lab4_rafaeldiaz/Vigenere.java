@@ -10,27 +10,34 @@ package lab4_rafaeldiaz;
  * @author Josue Rodriguez
  */
 public class Vigenere extends Antirrobo{
+    
+    //Al hacer la validacion, usar ignore case.
 
     @Override
     public String codificacion(String codigo, String key) {
+        String c = codigo.toUpperCase();
+        //System.out.println(c);
         char[][] tabla=new char[26][26];
-        String salida="";
+        String[] salida=new String[2];
         tabla=Tabla();
+        salida[0]="";
         int contador=0;
         for (int i = 0; i < codigo.length(); i++) {
-            int letracodigo=codigo.charAt(i)-65;
+            int letracodigo=c.charAt(i)-65;
             if (contador==key.length()){
                 contador=0;
             }
             if(letracodigo<0 || letracodigo>26){
-                salida+=codigo.charAt(i);
+                salida[0]+=c.charAt(i);
             }else{
                 int letrakey=key.charAt(contador)-65;
-                salida+=tabla[letracodigo][letrakey];
+                salida[0]+=tabla[letracodigo][letrakey];
                 contador++;
             }
         }
-        return salida;
+        salida[1]=key;
+        String enviar = salida[0];
+        return enviar;
     }
 
     @Override

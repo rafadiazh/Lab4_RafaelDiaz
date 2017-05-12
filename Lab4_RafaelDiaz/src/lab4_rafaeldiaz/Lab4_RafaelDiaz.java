@@ -38,12 +38,12 @@ public class Lab4_RafaelDiaz {
      */
     public static void main(String[] args) {
         //RAFA ESTO SOLO ES PRUEBA SE PUEDE BORRAR
-        Antirrobo a = new Transposicion();
+        Antirrobo a = new Binario();
         System.out.println("CONTRA: ");
         String x = sc.next();
         System.out.println(a.codificacion(x, "HOLA"));
         String y = a.codificacion(x, "HOLA");
-        System.out.println(a.decodificacion(x, "HoLa"));
+        System.out.println(a.decodificacion(y, "HOLA"));
         //HASTA AQUI
         A_dePlanta ap = new A_dePlanta();
         A_regionales ar = new A_regionales();
