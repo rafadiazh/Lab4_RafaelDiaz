@@ -25,6 +25,14 @@ public class eSeguridad extends Empleado{
         this.contrasena = contrasena;
     }
 
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
     
 
     public Date getFecha() {
