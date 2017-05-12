@@ -5,35 +5,42 @@
  */
 package lab4_rafaeldiaz;
 
+import java.util.Date;
+
 /**
  *
  * @author Josue Rodriguez
  */
 public class eSeguridad extends Empleado{
     
-    String dia;
-
+    Date fecha;
+    String contrasena;
     public eSeguridad() {
         super();
     }
 
-    public eSeguridad(String dia, double sueldo, String nombre, String id, int edad, double altura, double peso, String residencia) {
+    public eSeguridad(Date fecha, String contrasena, double sueldo, String nombre, String id, int edad, double altura, double peso, String residencia) {
         super(sueldo, nombre, id, edad, altura, peso, residencia);
-        this.dia = dia;
+        this.fecha = fecha;
+        this.contrasena = contrasena;
     }
 
-    public String getDia() {
-        return dia;
+    
+
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setDia(String dia) {
-        this.dia = dia;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     @Override
     public String toString() {
-        return "eSeguridad{" + "dia=" + dia + '}';
+        return super.toString()+"eSeguridad{" + "fecha=" + fecha + '}';
     }
+
+    
     
     
     

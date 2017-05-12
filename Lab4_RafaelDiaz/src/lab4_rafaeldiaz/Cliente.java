@@ -5,6 +5,8 @@
  */
 package lab4_rafaeldiaz;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Josue Rodriguez
@@ -13,7 +15,14 @@ public class Cliente extends Persona {
     
     double dinero;
     String fecha_compra;
-    //ArrayList<Producto> producto = new ArrayList();    
+    ArrayList<Producto> producto = new ArrayList();  
+
+    public Cliente(double dinero, String fecha_compra, String nombre, String id, int edad, double altura, double peso, String residencia) {
+        super(nombre, id, edad, altura, peso, residencia);
+        this.dinero = dinero;
+        this.fecha_compra = fecha_compra;
+    }
+    
 
     public Cliente() {
         super();
