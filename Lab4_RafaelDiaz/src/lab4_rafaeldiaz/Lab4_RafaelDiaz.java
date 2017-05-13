@@ -14,26 +14,26 @@ import java.util.Scanner;
  * @author Rafael
  */
 public class Lab4_RafaelDiaz {
-    
+
     static Scanner sc = new Scanner(System.in);
     static double tamanometros, altura;
     static int numplantas;
     static String nombredepart;
-    
+
     static String nombre;
     static String id;
     static int edad;
     static double alturapersona, peso;
     static String residencia;
-    
+
     static double dinero;
     static String fecha_compra;
     static String hora_entrada, hora_salida, fechai;
-    
+
     static Date fecha;
     static String contrasena;
     static double sueldo;
-    
+
     static Date fecha2;
     static double vidautil;
     static double precio;
@@ -46,8 +46,7 @@ public class Lab4_RafaelDiaz {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-        
+
         A_dePlanta ap = new A_dePlanta();
         A_regionales ar = new A_regionales();
         A_plataforma aplat = new A_plataforma();
@@ -62,7 +61,7 @@ public class Lab4_RafaelDiaz {
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    
+
                     System.out.println("1. Agregar\n2. Modificar\n3. Eliminar\n4. Transferir");
                     int op = sc.nextInt();
                     switch (op) {
@@ -103,7 +102,7 @@ public class Lab4_RafaelDiaz {
                             }
                             System.out.println("\nQue almacen desea modificar? 0,1,2...");
                             int pos = sc.nextInt();
-                            
+
                             if (almacenes.get(pos) instanceof A_dePlanta) {
                                 System.out.println("Que desea modificar?(empezando en 1)");
                                 int posmod = sc.nextInt();
@@ -115,7 +114,7 @@ public class Lab4_RafaelDiaz {
                                     System.out.println("Ingrese un nuevo tamaño en metros");
                                     tamanometros = sc.nextDouble();
                                     almacenes.get(pos).setTamanometros(tamanometros);
-                                    
+
                                 } else if (posmod == 3) {
                                     System.out.println("Ingrese una nueva altura");
                                     altura = sc.nextDouble();
@@ -123,7 +122,7 @@ public class Lab4_RafaelDiaz {
                                 } else {
                                     System.out.println("No existe esa posicion");
                                 }
-                                
+
                             } else if (almacenes.get(pos) instanceof A_regionales) {
                                 System.out.println("Que desea modificar?(empezando en 1)");
                                 int posmod = sc.nextInt();
@@ -138,7 +137,7 @@ public class Lab4_RafaelDiaz {
                                     System.out.println("Ingrese un nuevo tamaño en metros");
                                     tamanometros = sc.nextDouble();
                                     almacenes.get(pos).setTamanometros(tamanometros);
-                                    
+
                                 } else if (posmod == 3) {
                                     System.out.println("Ingrese una nueva altura");
                                     altura = sc.nextDouble();
@@ -157,11 +156,11 @@ public class Lab4_RafaelDiaz {
                                     System.out.println("Ingrese una nueva altura");
                                     altura = sc.nextDouble();
                                     almacenes.get(pos).setAltura(altura);
-                                    
+
                                 } else {
                                     System.out.println("No existe esa posicion");
                                 }
-                                
+
                             } else if (almacenes.get(pos) instanceof A_temporales) {
                                 System.out.println("Que desea modificar?(empezando en 1)");
                                 int posmod = sc.nextInt();
@@ -173,7 +172,7 @@ public class Lab4_RafaelDiaz {
                                     System.out.println("Ingrese una nueva altura");
                                     altura = sc.nextDouble();
                                     almacenes.get(pos).setAltura(altura);
-                                    
+
                                 } else {
                                     System.out.println("No existe esa posicion");
                                 }
@@ -186,11 +185,11 @@ public class Lab4_RafaelDiaz {
                             System.out.println("\nQue almacen desea eliminar? 0,1,2...");
                             int poseliminar = sc.nextInt();
                             almacenes.remove(poseliminar);
-                            
+
                             break;
                         case 4:
                             for (int i = 0; i < almacenes.size(); i++) {
-                                System.out.println(i+" "+almacenes.get(i));
+                                System.out.println(i + " " + almacenes.get(i));
                             }
                             System.out.println("Cual almacen desea transferir?");
                             int trans = sc.nextInt();
@@ -203,7 +202,7 @@ public class Lab4_RafaelDiaz {
                             System.out.println("Esa no es una opcion :D");
                             break;
                     }
-                    
+
                     break;
                 case 2:
                     System.out.println("1. Agregar\n2. Modificar\n3. Eliminar");
@@ -244,7 +243,9 @@ public class Lab4_RafaelDiaz {
                                     System.out.println("Ingrese la fecha de inicio");
                                     fechai = sc.nextLine();
                                     sc = new Scanner(System.in);
+
                                     personas.add(new Carga(hora_entrada, hora_salida, fechai, sueldo, nombre, id, edad, altura, peso, residencia));
+
                                 } else {
                                     sc = new Scanner(System.in);
                                     System.out.println("Ingrese una contraseña");
@@ -252,7 +253,7 @@ public class Lab4_RafaelDiaz {
                                     sc = new Scanner(System.in);
                                     personas.add(new eSeguridad(fecha, contrasena, sueldo, nombre, id, edad, altura, peso, residencia));
                                 }
-                                
+
                             } else if (quees == 2) {
                                 System.out.println("Ingrese cantidad de dinero");
                                 dinero = sc.nextDouble();
@@ -273,7 +274,7 @@ public class Lab4_RafaelDiaz {
                             int permod = sc.nextInt();
                             if (personas.get(permod) instanceof Empleado) {
                                 if (personas.get(permod) instanceof Carga) {
-                                    
+
                                     System.out.println("Que desea modificar? 0,1,2...");
                                     int modper = sc.nextInt();
                                     switch (modper) {
@@ -339,13 +340,13 @@ public class Lab4_RafaelDiaz {
                                         default:
                                             System.out.println("Esa no es una opcion");
                                     }
-                                    
+
                                 } else {
-                                    
+
                                     System.out.println("Que desea modificar? 0,1,2...");
                                     int modper = sc.nextInt();
                                     switch (modper) {
-                                        
+
                                         case 1:
                                         case 2:
                                             System.out.println("Ingrese nueva contraseña");
@@ -394,11 +395,11 @@ public class Lab4_RafaelDiaz {
                                             System.out.println("No es una opcion");
                                             break;
                                     }
-                                    
+
                                 }
-                                
+
                             } else if (personas.get(permod) instanceof Cliente) {
-                                
+
                                 System.out.println("Que desea modificar? 0,1,2...");
                                 int modper = sc.nextInt();
                                 switch (modper) {
@@ -415,7 +416,7 @@ public class Lab4_RafaelDiaz {
                                         ((Cliente) personas.get(permod)).setFecha_compra(fecha_compra);
                                         break;
                                     case 3:
-                                        
+
                                         sc = new Scanner(System.in);
                                         System.out.println("Ingrese nuevo nombre");
                                         nombre = sc.nextLine();
@@ -453,13 +454,13 @@ public class Lab4_RafaelDiaz {
                                         System.out.println("No es una opcion");
                                         break;
                                 }
-                                
+
                             }
-                            
+
                             break;
                         case 3:
                             for (int i = 0; i < personas.size(); i++) {
-                                System.out.println(i+" "+personas.get(i));
+                                System.out.println(i + " " + personas.get(i));
                             }
                             System.out.println("Que persona desea eliminar?");
                             int personaeliminar = sc.nextInt();
@@ -475,7 +476,7 @@ public class Lab4_RafaelDiaz {
                     int op3 = sc.nextInt();
                     switch (op3) {
                         case 1:
-                            
+
                             System.out.println("Ingrese la vida util");
                             vidautil = sc.nextDouble();
                             System.out.println("Ingrese el precio");
@@ -501,7 +502,7 @@ public class Lab4_RafaelDiaz {
                             int modpro = sc.nextInt();
                             System.out.println("Que posicion desea modificar? 0,1,2...");
                             int posmodi = sc.nextInt();
-                            
+
                             switch (posmodi) {
                                 case 1:
                                     System.out.println("Ingrese nueva vida util");
@@ -540,7 +541,7 @@ public class Lab4_RafaelDiaz {
                                 default:
                                     System.out.println("Esa no es una opcion");
                                     break;
-                                
+
                             }
                             break;
                         case 3:
@@ -557,7 +558,7 @@ public class Lab4_RafaelDiaz {
                     }
                     break;
                 case 4:
-                    
+
                     break;
                 default:
                     System.out.println("Esa no es una opcion :D");
@@ -565,5 +566,5 @@ public class Lab4_RafaelDiaz {
             }
         } while (opcion != 4);
     }
-    
+
 }

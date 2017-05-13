@@ -9,7 +9,7 @@ package lab4_rafaeldiaz;
  *
  * @author Josue Rodriguez
  */
-public class Persona {
+public class Persona{
     String nombre;
     String id;
     int edad;
@@ -19,9 +19,9 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(String nombre, String id, int edad, double altura, double peso, String residencia) {
+    public Persona(String nombre, String id, int edad, double altura, double peso, String residencia)throws Excepcion {
         if(edad<18){
-            
+            throw new Excepcion("**NO PUEDE SER MENOR DE 18 AÑOS**");
         }else{
         this.nombre = nombre;
         this.id = id;
