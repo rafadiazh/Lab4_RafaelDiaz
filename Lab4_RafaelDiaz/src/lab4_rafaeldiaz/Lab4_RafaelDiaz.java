@@ -44,7 +44,7 @@ static double sueldo;
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Excepcion{
         //RAFA ESTO SOLO ES PRUEBA SE PUEDE BORRAR
         Antirrobo a = new Binario();
         System.out.println("CONTRA: ");
@@ -240,7 +240,12 @@ static double sueldo;
                                     System.out.println("Ingrese la fecha de inicio");
                                     fechai = sc.nextLine();
                                     sc = new Scanner(System.in);
-                                    personas.add(new Carga(hora_entrada, hora_salida, fechai, sueldo, nombre, id, edad, altura, peso, residencia));
+                                    try {
+                                        personas.add(new Carga(hora_entrada, hora_salida, fechai, sueldo, nombre, id, edad, altura, peso, residencia));
+                                    } catch (Excepcion ex) {
+                                        System.out.println(ex.getMessage());
+                                    }
+                                    
                                 } else {
                                     sc = new Scanner(System.in);
                                     System.out.println("Ingrese una contraseña");
